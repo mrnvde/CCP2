@@ -43,7 +43,7 @@
                     <div class="col-12 text-center px-0 py-1">
                         <ul class="nav nav-pills d-flex justify-content-around">
                             <li class="nav-item">
-                                <a class="nav-link text-sm-center py-0 px-1" href="contact.html"><i class="far fa-envelope fa-lg"></i><p class="titre m-0">Me contacter</p></a>
+                                <a class="nav-link text-sm-center py-0 px-1" href="contact.php"><i class="far fa-envelope fa-lg"></i><p class="titre m-0">Me contacter</p></a>
                             </li>
                         </ul>
                     </div>

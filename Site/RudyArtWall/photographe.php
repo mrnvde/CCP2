@@ -23,38 +23,26 @@ $db=disconnectDb();
 include("header.php");
 ?>
 
-        <main class="row overflow-auto" id="corps">
-            <div class="col-sm-8">
-                <!-- information sur le photogrpahe 
-                NOM et Prenom provenant de la BDD
-                Puis la description du photographe provenant de la BDD ( le lorem ipsum est autorisé pour les descriptions)
-                -->
-                <p>
-                    Lorem ipsum dolor sit amet? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, magnam, dolores illum dolore, ipsum eum laboriosam tenetur, optio doloribus nisi vero iusto possimus fugiat obcaecati accusantium consectetur! Quo repellat, temporibus.
-                    Lorem ipsum dolor sit amet? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, magnam, dolores illum dolore, ipsum eum laboriosam tenetur, optio doloribus nisi vero iusto possimus fugiat obcaecati accusantium consectetur! Quo repellat, temporibus.
-                    Lorem ipsum dolor sit amet? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, magnam, dolores illum dolore, ipsum eum laboriosam tenetur, optio doloribus nisi vero iusto possimus fugiat obcaecati accusantium consectetur! Quo repellat, temporibus.
-                    Lorem ipsum dolor sit amet? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, magnam, dolores illum dolore, ipsum eum laboriosam tenetur, optio doloribus nisi vero iusto possimus fugiat obcaecati accusantium consectetur! Quo repellat, temporibus.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, magnam, dolores illum dolore, ipsum eum laboriosam tenetur, optio doloribus nisi vero iusto possimus fugiat obcaecati accusantium consectetur! Quo repellat, temporibus.
-                    Lorem ipsum dolor sit amet? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, magnam, dolores illum dolore, ipsum eum laboriosam tenetur, optio doloribus nisi vero iusto possimus fugiat obcaecati accusantium consectetur! Quo repellat, temporibus.
-                    Lorem ipsum dolor sit amet? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, magnam, dolores illum dolore, ipsum eum laboriosam tenetur, optio doloribus nisi vero iusto possimus fugiat obcaecati accusantium consectetur! Quo repellat, temporibus.
-                    Lorem ipsum dolor sit amet? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, magnam, dolores illum dolore, ipsum eum laboriosam tenetur, optio doloribus nisi vero iusto possimus fugiat obcaecati accusantium consectetur! Quo repellat, temporibus.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, magnam, dolores illum dolore, ipsum eum laboriosam tenetur, optio doloribus nisi vero iusto possimus fugiat obcaecati accusantium consectetur! Quo repellat, temporibus.
-                    Lorem ipsum dolor sit amet? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, magnam, dolores illum dolore, ipsum eum laboriosam tenetur, optio doloribus nisi vero iusto possimus fugiat obcaecati accusantium consectetur! Quo repellat, temporibus.
-                    Lorem ipsum dolor sit amet? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, magnam, dolores illum dolore, ipsum eum laboriosam tenetur, optio doloribus nisi vero iusto possimus fugiat obcaecati accusantium consectetur! Quo repellat, temporibus.
-                    Lorem ipsum dolor sit amet? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, magnam, dolores illum dolore, ipsum eum laboriosam tenetur, optio doloribus nisi vero iusto possimus fugiat obcaecati accusantium consectetur! Quo repellat, temporibus.
-                </p>
+    <main class="row overflow-auto" id="corps">  
+        <div class="container overflow-hidden">
+          <div class="row gx-5">
+            <div class="">
+                <div class="p-5 border bg-dark">
+                    <?php
+                    foreach ($results as $photographe){
+                    ?>
+
+                        <img src="<?= $photographe->AVATAR_PHOTOGRAPHE ?>" width="200" height="200"><br>
+                        <span><?= $photographe->NOM_PHOTOGRAPHE ?> | <?= $photographe->PRENOM_PHOTOGRAPHE ?></span><br>
+                        <span>Description : <?= $photographe->DESCRIPTION_PHOTOGRAPHE ?></span><br><br>
+                    <?php
+                    }
+                    ?>
+                </div>
             </div>
-            <div class="col-sm-4 d-flex justify-content-center align-items-center">
-                
-                <!-- image du photographe provenant de la bdd-->
-                
-                <img src="https://picsum.photos/seed/picsum/1920/1080" class="img-fluid"  alt="welcome">
-            </div>
-        </main>
+          </div>
+        </div>
+    </main>
 
 <?php
 include("footer.php");

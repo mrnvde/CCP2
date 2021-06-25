@@ -169,3 +169,10 @@ p {
     width: 300px;
 }
 
+#blocAffiche {
+    display: inline-table;
+    
+}
+.div1, .div2 {
+    display: inline-table;
+}
